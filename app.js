@@ -124,7 +124,9 @@ mongoose
     }
     else{
     console.log("Connected to the mongodb");
-    app.listen(process.env.MONGO_PORT || 3000)  
+    const server = require('http').createServer();
+    port = process.env.MONGO_PORT || 3000;  
+    server.listen(port, () => console.log(`Listening on ${port}`));
     }
   })
   
