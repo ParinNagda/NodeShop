@@ -124,9 +124,7 @@ mongoose
     }
     else{
     console.log("Connected to the mongodb");
-    const server = require('http').createServer();
-    port = process.env.PORT || 3000;  
-    server.listen(port, () => console.log(`Listening on ${port}`));
+    app.listen(process.env.PORT || 3000)  
     }
   })
   
