@@ -9,7 +9,7 @@ const {validationResult} = require('express-validator')
 
 const DOMAIN = "sandbox45bcbcc034274dc5a527aacc7fdb2990.mailgun.org";
 const mg = mailgun({
-	apiKey: "967bfafcc7dac532b9d70d0df09970cf-62916a6c-3b45291c",
+	apiKey: process.env.SMS_GUN,
 	domain: DOMAIN
 });
 
